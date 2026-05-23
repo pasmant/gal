@@ -77,11 +77,14 @@ export function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-5"
+      className="relative space-y-5"
       noValidate
     >
-      {/* Honeypot */}
-      <div className="absolute -left-[9999px]" aria-hidden="true">
+      {/* Honeypot — must stay in-layout; off-screen negative left breaks RTL/mobile scroll width */}
+      <div
+        className="pointer-events-none absolute start-0 top-0 -z-10 m-0 h-px w-px overflow-hidden border-0 p-0 opacity-0"
+        aria-hidden="true"
+      >
         <input type="text" tabIndex={-1} autoComplete="off" {...register("website")} />
       </div>
 

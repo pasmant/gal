@@ -112,7 +112,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen antialiased">
+      <body className="min-h-screen w-full antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
@@ -128,7 +128,9 @@ export default function RootLayout({
 
           <Header />
 
-          <main id="main-content">{children}</main>
+          <main id="main-content" className="min-w-0 max-w-full overflow-x-clip">
+            {children}
+          </main>
 
           <Footer />
 
