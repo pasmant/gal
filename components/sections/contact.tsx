@@ -15,7 +15,7 @@ export function Contact() {
       />
 
       <div className="grid gap-12 lg:grid-cols-2">
-        <FadeIn direction="right">
+        <FadeIn>
           <div className="rounded-2xl border border-border/50 bg-card p-8 shadow-sm">
             <h3 className="mb-6 font-heading text-xl font-bold text-foreground">
               השאירו פרטים ונחזור אליכם תוך 24 שעות
@@ -24,7 +24,7 @@ export function Contact() {
           </div>
         </FadeIn>
 
-        <FadeIn direction="left" delay={0.15}>
+        <FadeIn delay={0.15}>
           <div className="space-y-6">
             <div className="space-y-4">
               <a

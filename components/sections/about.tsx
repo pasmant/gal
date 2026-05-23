@@ -20,7 +20,7 @@ export function About() {
       />
 
       <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-        <FadeIn direction="right">
+        <FadeIn>
           <div className="space-y-6">
             {aboutData.bio.split("\n\n").map((paragraph, i) => (
               <p
@@ -33,7 +33,7 @@ export function About() {
           </div>
         </FadeIn>
 
-        <FadeIn direction="left" delay={0.2}>
+        <FadeIn delay={0.2}>
           <div className="space-y-8">
             <div className="grid gap-4 sm:grid-cols-3">
               {aboutData.trustSignals.map((signal) => {

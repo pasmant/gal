@@ -7,14 +7,12 @@ interface FadeInProps {
   children: React.ReactNode;
   className?: string;
   delay?: number;
-  direction?: "up" | "down" | "left" | "right" | "none";
+  direction?: "up" | "down" | "none";
 }
 
 const directionMap = {
-  up: { y: 30 },
-  down: { y: -30 },
-  left: { x: 30 },
-  right: { x: -30 },
+  up: { y: 24 },
+  down: { y: -24 },
   none: {},
 };
 
@@ -31,7 +29,7 @@ export function FadeIn({
     <motion.div
       ref={ref}
       initial={{ opacity: 0, ...directionMap[direction] }}
-      animate={isInView ? { opacity: 1, x: 0, y: 0 } : undefined}
+      animate={isInView ? { opacity: 1, y: 0 } : undefined}
       transition={{
         duration: 0.6,
         delay,

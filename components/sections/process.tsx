@@ -12,7 +12,7 @@ export function Process() {
         subtitle={processData.subtitle}
       />
 
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-8 overflow-hidden sm:grid-cols-2 lg:grid-cols-4">
         {processData.steps.map((step, i) => (
           <FadeIn key={step.step} delay={i * 0.1}>
             <div className="relative text-center">
